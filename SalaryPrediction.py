@@ -5,5 +5,6 @@ model=pickle.load(pickle_in)
 e=st.number_input('Enter experience')
 if st.button('PREDICT'):
   s=model.predict([[e]]).squeeze()
+  s=iint(s)
   st.success(f'Salary is {s}')
      
